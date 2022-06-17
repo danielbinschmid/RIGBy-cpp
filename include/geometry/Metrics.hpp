@@ -37,17 +37,17 @@ inline std::string toString(const EMetric metric)
 {
 	switch (metric)
 	{
-		case EMetric::Riemann: return "Riemann";
-		case EMetric::Euclidian: return "Euclidian";
-		case EMetric::LogEuclidian: return "Log Euclidian";
-		case EMetric::LogDet: return "Log Determinant";
-		case EMetric::Kullback: return "Kullback";
-		case EMetric::ALE: return "AJD-based log-Euclidean";
-		case EMetric::Harmonic: return "Harmonic";
-		case EMetric::Wasserstein: return "Wasserstein";
-		case EMetric::Identity: return "Identity";
+		case EMetric::Riemann: return "riemann";
+		case EMetric::Euclidian: return "euclidian";
+		case EMetric::LogEuclidian: return "log_euclidian";
+		case EMetric::LogDet: return "log_determinant";
+		case EMetric::Kullback: return "kullback";
+		case EMetric::ALE: return "ajd_based_log_euclidean";
+		case EMetric::Harmonic: return "harmonic";
+		case EMetric::Wasserstein: return "wasserstein";
+		case EMetric::Identity: return "identity";
 	}
-	return "Invalid Metric";
+	return "invalid_metric";
 }
 
 /// <summary>	Convert string to metric. </summary>
@@ -55,14 +55,14 @@ inline std::string toString(const EMetric metric)
 /// <returns>	<see cref="EMetric"/> </returns>
 inline EMetric StringToMetric(const std::string& metric)
 {
-	if (metric == "Riemann") { return EMetric::Riemann; }
-	if (metric == "Euclidian") { return EMetric::Euclidian; }
-	if (metric == "Log Euclidian") { return EMetric::LogEuclidian; }
-	if (metric == "Log Determinant") { return EMetric::LogDet; }
-	if (metric == "Kullback") { return EMetric::Kullback; }
-	if (metric == "AJD-based log-Euclidean") { return EMetric::ALE; }
-	if (metric == "Harmonic") { return EMetric::Harmonic; }
-	if (metric == "Wasserstein") { return EMetric::Wasserstein; }
+	if (metric == "riemann") { return EMetric::Riemann; }
+	if (metric == "euclidian") { return EMetric::Euclidian; }
+	if (metric == "log_euclidian") { return EMetric::LogEuclidian; }
+	if (metric == "log_determinant") { return EMetric::LogDet; }
+	if (metric == "kullback") { return EMetric::Kullback; }
+	if (metric == "ajd_based_log_euclidean") { return EMetric::ALE; }
+	if (metric == "harmonic") { return EMetric::Harmonic; }
+	if (metric == "wasserstein") { return EMetric::Wasserstein; }
 	return EMetric::Identity;
 }
 
